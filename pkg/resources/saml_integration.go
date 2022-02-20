@@ -39,9 +39,9 @@ var samlIntegrationSchema = map[string]*schema.Schema{
 	"saml2_provider": {
 		Type:        schema.TypeString,
 		Required:    true,
-		Description: "The string describing the IdP. One of the following: OKTA, ADFS, Custom.",
+		Description: "The string describing the IdP. One of the following: OKTA, ADFS, Custom, AzureAD.",
 		ValidateFunc: validation.StringInSlice([]string{
-			"OKTA", "ADFS", "CUSTOM",
+			"OKTA", "ADFS", "CUSTOM", "AzureAD",
 		}, true),
 		DiffSuppressFunc: func(k, old, new string, d *schema.ResourceData) bool {
 			normalize := func(s string) string {

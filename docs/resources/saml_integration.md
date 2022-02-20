@@ -30,7 +30,7 @@ resource "snowflake_saml_integration" "saml_integration" {
 
 - **name** (String) Specifies the name of the SAML2 integration. This name follows the rules for Object Identifiers. The name should be unique among security integrations in your account.
 - **saml2_issuer** (String) The string containing the IdP EntityID / Issuer.
-- **saml2_provider** (String) The string describing the IdP. One of the following: OKTA, ADFS, Custom.
+- **saml2_provider** (String) The string describing the IdP. One of the following: OKTA, ADFS, Custom, AzureAD.
 - **saml2_sso_url** (String) The string containing the IdP SSO URL, where the user should be redirected by Snowflake (the Service Provider) with a SAML AuthnRequest message.
 - **saml2_x509_cert** (String) The Base64 encoded IdP signing certificate on a single line without the leading -----BEGIN CERTIFICATE----- and ending -----END CERTIFICATE----- markers.
 
