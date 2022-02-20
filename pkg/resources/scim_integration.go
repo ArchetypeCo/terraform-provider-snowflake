@@ -24,7 +24,7 @@ var scimIntegrationSchema = map[string]*schema.Schema{
 		Required:    true,
 		Description: "Specifies the client type for the scim integration",
 		ValidateFunc: validation.StringInSlice([]string{
-			"OKTA", "AZURE", "CUSTOM",
+			"OKTA", "AZURE", "CUSTOM", "AzureAD",
 		}, true),
 		DiffSuppressFunc: func(k, old, new string, d *schema.ResourceData) bool {
 			normalize := func(s string) string {
